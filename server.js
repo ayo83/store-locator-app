@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/v1/stores', require('./routes/stores'));
 
 
-const PORT = process.env || 2000;
+// const PORT = process.env.PORT || 2000;
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || 2000, ()=>{
     console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT} `);
 })
